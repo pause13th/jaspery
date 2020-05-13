@@ -11,6 +11,9 @@
 /wp-content/*
 !/wp-content/mu-plugins
 /wp-content/mu-plugins/mu-default/vendor
+
+!/wp-content/themes/
+/wp-content/themes/*
 !/wp-content/themes/genesis
 !/wp-content/themes/genesis-jaspery
 
