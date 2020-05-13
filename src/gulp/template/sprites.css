@@ -1,0 +1,19 @@
+/* Do not edit modules/sprites directly */
+/* instead edit gulp/template/sprite */
+/* <span class="icon icon--star"></span> */
+{{#shapes}}
+	{{#first}}
+	.icon {
+		display: inline-block;
+		background-image: url('../images/sprites/{{{sprite}}}');
+	}
+	.no-svg .icon {
+		background-image: url('../images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+	}
+	{{/first}}
+	.icon--{{base}} {
+		width: {{width.outer}}px;
+		height: {{height.outer}}px;
+		background-position: {{position.relative.xy}};
+	}
+{{/shapes}}

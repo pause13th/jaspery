@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.admin.scss"],"names":[],"mappings":"AACA;;EAEE,iBAAiB,EAAA","file":"style.admin.css","sourcesContent":["\r\n.block-editor-rich-text__editable:focus,\r\npre.wp-block-verse {\r\n  font-size: 1.2rem;\r\n}"]}

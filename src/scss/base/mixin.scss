@@ -1,0 +1,78 @@
+@mixin title-font-style {
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.325;
+  color: #fff;
+  width: 95%;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px #131313;
+  font-size: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.125rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin section-card-display {
+  a:hover {
+    text-decoration: none;
+  }
+
+  .card {
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    min-height: 140px;
+    @include media-breakpoint-up(sm) {
+      min-height: 320px;
+    }
+    @include media-breakpoint-up(lg) {
+      min-height: 380px;
+    }
+    
+    img {
+      margin: 0;
+      border-radius: 0;
+      position: absolute;
+      top: 0;
+
+      object-fit: cover;
+      height: 100%;
+      object-position: 50% 50%;
+      z-index: 0;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+    }
+    &:hover img {
+      transform: scale(1.05);
+    }
+    &-title {
+      width: 100%;
+
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.325;
+      width: 95%;
+      margin: 0 auto;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+    &-title--highlight {
+      color: #fff;
+      text-shadow: 1px 1px 4px #131313;
+    }
+    &-body {
+      z-index: 10;
+      text-align: right;
+    }
+  }
+
+  & .card {
+    background-color: $color-lightgrey;
+  }
+}

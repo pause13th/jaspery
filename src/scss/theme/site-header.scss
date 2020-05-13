@@ -1,0 +1,91 @@
+.site-header {
+  background-color: $color-white;
+  box-shadow: 0 4px 8px rgba($color-grey, 0.6);
+
+  .wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(lg) {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+
+    .navbar-toggler {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+    .navbar-collapse {
+      @include media-breakpoint-up(lg) {
+        display: flex !important;
+        flex-basis: auto;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+.menu-primary {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .menu-item {
+    display: inline-block;
+    margin: 4px 15px;
+  }
+}
+
+// slim
+.site-header {
+  .wrap {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: padding 0.4s ease;
+  }
+  .title-area .custom-logo {
+    transition: width 0.4s ease;
+    width: 220px;
+  }
+  &.slim {
+    .wrap {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .title-area .custom-logo {
+      width: 140px;
+    }
+  }
+}
+
+// genesis-nav-menu
+.genesis-nav-menu {
+  font-family: $font-head;
+
+  .menu-item {
+    &.current-menu-item a {
+      color: $color-blue;
+    }
+    a {
+      color: $color-lightgrey;
+      letter-spacing: .5px;
+      transition: color 0.4s ease;
+      &:hover,
+      &:focus {
+        color: $color-blue;
+        text-decoration: none;
+      }
+    }
+  }
+}

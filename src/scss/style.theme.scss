@@ -1,0 +1,178 @@
+/*
+Theme Name: Genesis Jaspery
+Theme URI: 
+Description: Genesis Jaspery
+Author: 
+Author URI: 
+
+Version: 1.2004.1
+
+Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
+
+Template: genesis
+
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain: genesis-jaspery
+*/
+
+// dependencies
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/tiny-slider/src/tiny-slider";
+
+// @import "./base/mixin";
+@import "./base/variable";
+// @import "./base/_genesis";
+// @import "./base/_wordpress";
+@import "./base/default";
+
+.wp-block-verse {
+  display: block;
+  font-size: 1.3rem;
+  font-family: $font-head;
+}
+
+// bootstrap override
+// h1,
+// .h1,
+// h2,
+// .h2,
+// h3,
+// .h3,
+// h4,
+// .h4,
+// h5,
+// .h5,
+// h6,
+// .h6 {
+//   font-size: 1rem;
+// }
+
+// @import "./theme/site-header.scss";
+// @import "./theme/site-footer.scss";
+
+// frontpage-entry
+.entry {
+  &.format-quote .card {
+    background-color: slateblue;
+    color: #fff;
+    a,
+    pre {
+      color: #fff;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+// page-wot
+.page-wot {
+  .entry-content {
+    display: grid;
+    gap: 1rem 10px;
+
+    margin: 3rem auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+.card__wot {
+  .card-header {
+    position: relative;
+  }
+  .card-header--grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px;
+    .dropright {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+  }
+  .dropdown--upper-left {
+    .btn:focus {
+      box-shadow: none;
+    }
+  }
+  .dropdown-toggle--arrow-down:after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+}
+
+.tag-css.tag-dailies {
+  max-width: 420px;
+  margin: 3rem auto;
+  border: 1px solid #ececec;
+
+  .wrap {
+    position: relative;
+    padding-bottom: 100%;
+  }
+  &.tag-16x9 .wrap {
+    padding-bottom: 56.25%;
+  }
+  &.tag-4x3 .wrap {
+    padding-bottom: 75%;
+  }
+  .entry-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .page-red-frame & {
+    padding: 1rem;
+    background-color: #ccc;
+    position: relative;
+    z-index: 0;
+    span.werk {
+      font-size: 8rem;
+      color: #fff;
+      padding: 5rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 40%;
+      height: 80%;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border: 1rem solid #fff;
+      border-radius: 5rem;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      z-index: -1;
+      background-color: darkred;
+    }
+    &:after {
+      left: 10%;
+    }
+    &:before {
+      right: 10%;
+    }
+  }
+}
