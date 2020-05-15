@@ -27,7 +27,12 @@ class Enqueue extends BaseController
 
     public function wp_enqueue()
     {
-        wp_enqueue_script('muplugin', $this->plugin_url . 'dist/script.muplugin.js', array('jquery'), '1.0.' . date("ymdhis"), true);
+        // check if development
+        if (defined('MODE') == 'development') {
+            wp_enqueue_script('muplugin', 'http://localhost:3000/script.muplugin.js', array('jquery'), '1.0.' . date("ymdhis"), true);
+        } else {
+            wp_enqueue_script('muplugin', $this->plugin_url . 'dist/script.muplugin.js', array('jquery'), '1.0.' . date("ymdhis"), true);
+        }
 
         // wp_localize_script('jquery', 'secret', array(
         //     'site_url' => get_site_url(),

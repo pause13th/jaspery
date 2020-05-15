@@ -1,5 +1,33 @@
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
+
+if (module.hot) {
+  module.hot.accept();
+}
+import "../css/style.theme.css";
+
+console.log("muplugins, webpack222");
+
+// codesplitting
+// let modal;
+// document.querySelectorAll(".modal").forEach((el) => {
+//   el.addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     if (typeof modal == "undefined") {
+//       import(/* webpackChunkName: "modal" */ "./modules/Modal")
+//         .then((x) => {
+//           modal = new x.default();
+//           setTimeout(() => modal.openTheModal(), 20);
+//         })
+//         .catch(() => {
+//           console.log("modal-load had a problem");
+//         });
+//     } else {
+//       modal.openTheModal();
+//     }
+//   });
+// });
 
 // import "bootstrap/dist/js/bootstrap.bundle";
 // import { tns } from "tiny-slider/src/tiny-slider";

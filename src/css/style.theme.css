@@ -1,0 +1,12 @@
+body {
+  background-color: red;
+}
+
+$mainBlue: skyblue;
+
+body {
+  color: $mainBlue;
+  background-color: #ccc;
+  // background-image: url("../images/skyblue.png");
+
+}
